@@ -1,0 +1,175 @@
+.play-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    width: 5rem;
+    height: 2rem;
+    background-color: green;
+    color:  white;
+}
+
+.play-button:hover {
+    opacity: 0.5;
+}
+
+.card {
+    position: relative;
+    width: 24rem;
+    height: 5rem;
+    left: 40%;
+}
+
+.card-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+#back {
+    position: relative;
+    width: 3rem;
+    height: 5%;
+    border-radius: 30%;
+    bottom: 10%;
+    left: 40%;
+    font-size: 28px;
+    transform: rotateY(180deg);
+    user-select: none;
+}
+
+
+#start-stop {
+    position: relative;
+    width: 3rem;
+    height: 5%;
+    border-radius: 50%;
+    bottom: 10%;
+    left: 46%;
+    font-size: 28px;
+    user-select: none;
+}
+
+#next {
+    position: relative;
+    width: 3rem;
+    height: 5%;
+    border-radius: 30%;
+    bottom: 10%;
+    left: 52%;
+    font-size: 28px;
+    user-select: none;
+}
+
+.Volumerange {
+    position: relative;
+    width: 8rem;
+    left: 60rem;
+    top: -4rem;
+    transform: rotate(-90deg);
+}
+
+.Seekrange {
+    position: relative;
+    width: 24rem;
+    left: 30rem;
+    top: 3rem;
+}
+
+#seekvalue {
+    position: relative;
+    font-size: 18px;
+    left: 32rem;
+    top: 3rem;
+}
+
+#upload-label {
+    position: relative;
+    left: 35%;
+    font-size: 28px;
+}
+
+#upload-file {
+    position: relative;
+    left: 40%;
+    font-size: 20px;
+    margin: 10px 0px 10px 0px;
+}
+
+#upload-button {
+    position: relative;
+    left: 35%;
+    width: 33rem;
+    font-size: 22px;
+}
+
+#upload-button:active {
+    margin-left: 2px;
+}
+
+
+@media screen and (max-width: 600px) {
+    .card {
+        width: 12rem;
+        left: 25%;
+    }
+
+    .card-title {
+        font-size: 12px; /* Csökkentett betűméret kisebb kijelzőknél */
+    }
+
+    #back, #start-stop, #next {
+        width: 2rem; /* Csökkentett gombok mérete kisebb kijelzőknél */
+        font-size: 20px;
+    }
+
+    #back {
+        left: 25%;
+    }
+
+    #start-stop {
+        left: 35%;
+    }
+
+    #next {
+        left: 48%;
+    }
+
+    #upload-label, #upload-file, #upload-button {
+        font-size: 16px;
+    }
+
+    #upload-label {
+        left: 15%;
+    }
+
+    #upload-file {
+        left: 20%;
+    }
+
+    #upload-button {
+        left: 15%;
+        width: 19rem;
+    }
+
+    .Volumerange {
+        width: 6rem;
+        left: 9rem;
+        top: -4rem;
+    }
+
+    .Seekrange {
+        width: 12rem;
+        left: 25%;
+        top: 1rem;
+    }
+
+    #seekvalue {
+        font-size: 12px;
+        left: 30%;
+        top: 1rem;
+    }
+}

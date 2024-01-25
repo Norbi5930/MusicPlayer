@@ -1,0 +1,27 @@
+{% extends "index.html" %}
+
+
+
+{% block content %}
+    <section>
+        <div class="card mt-2 mb-3">
+                <div class="card-body">
+                  <h5 class="card-title" id="musicTitle"></h5>
+                  <audio style="width:100%;" id="audio">
+                    <source src="" type="audio/mpeg">
+                    Your webbrowser don't play this music!
+                </audio>
+                </div>
+            </div>
+        <button type="button" id="back">►|</button>
+        <button type="button" id="start-stop">►</button>
+        <button type="button" id="next">►|</button>
+        <input type="range" class="Volumerange" min="0" max="1" step="0.01" id="range">
+        <input type="range" class="Seekrange" min="0" max="100" value="0" id="seekbar">
+        <span id="seekvalue">00:00</span>
+    </section>
+
+
+    <script src="{{ url_for('static', filename='music.js') }}"></script>
+
+{% endblock content %}
