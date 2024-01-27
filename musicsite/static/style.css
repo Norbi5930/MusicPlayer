@@ -86,28 +86,44 @@
     top: 3rem;
 }
 
-#upload-label {
+.list-container {
     position: relative;
-    left: 35%;
-    font-size: 28px;
+    height: 500px;
+    width: 800px;
+    overflow-y: auto;
+    left: 36rem;
+    top: 5rem;
 }
 
-#upload-file {
-    position: relative;
-    left: 40%;
-    font-size: 20px;
-    margin: 10px 0px 10px 0px;
+.list-container::-webkit-scrollbar {
+    width: 0;
 }
 
-#upload-button {
+#list-search-input {
     position: relative;
-    left: 35%;
-    width: 33rem;
+    left: 36rem;
+    top: 6rem;
+    width: 650px;
+    border-radius: 10px;
+    user-select: none;
+}
+
+#list-search-input:focus {
+    box-shadow: 0 0 30px rgb(0, 0, 0);
+}
+
+#list-search-button {
+    position: relative;
+    left: 38rem;
+    top: 6rem;
+    border-radius: 8px;
     font-size: 22px;
+    background-color: #91f062;
+    user-select: none;
 }
 
-#upload-button:active {
-    margin-left: 2px;
+#list-search-button:hover {
+    opacity: 0.8;
 }
 
 
@@ -138,26 +154,9 @@
         left: 48%;
     }
 
-    #upload-label, #upload-file, #upload-button {
-        font-size: 16px;
-    }
-
-    #upload-label {
-        left: 15%;
-    }
-
-    #upload-file {
-        left: 20%;
-    }
-
-    #upload-button {
-        left: 15%;
-        width: 19rem;
-    }
-
     .Volumerange {
         width: 6rem;
-        left: 9rem;
+        left: 10rem;
         top: -4rem;
     }
 
@@ -169,7 +168,27 @@
 
     #seekvalue {
         font-size: 12px;
-        left: 30%;
+        left: 25%;
         top: 1rem;
+    }
+
+    .list-container {
+        left: 0rem;
+        top: 2rem;
+        height: 24rem;
+        width: auto;
+        overflow-x: hidden;
+    }
+
+    #list-search-input {
+        left: 0rem;
+        top: 3rem;
+        width: 75%;
+    }
+
+    #list-search-button {
+        left: 0rem;
+        top: 3rem;
+        font-size: 20px;
     }
 }

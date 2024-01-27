@@ -22,6 +22,25 @@
     </section>
 
 
+    <section>
+        <div class="list-container">
+            {% if musics != [] %}
+                {% for music in musics %}
+                <div class="list-content">
+                    <p class="list-music-title" id="list-music-{{ loop.index }}">{{ music.title }}</p>
+                    <button type="button" id="list-play-button-{{ loop.index }}" onclick="play_manual_music('{{ loop.index }}')">►</button>
+                </div>
+                {% endfor %}
+            {% else %}
+                <p style="font-size: 16px;">Nem találtunk megfelelő zenét!</p>
+            {% endif %}
+        </div>
+        <form action="{{ url_for('media_player') }}" method="get">
+            <input type="text" id="list-search-input" placeholder="Keresés" name="search-music">
+            <button type="submit" id="list-search-button">Keresés</button>
+        </form>
+    </section>
+
     <script src="{{ url_for('static', filename='music.js') }}"></script>
 
 {% endblock content %}
