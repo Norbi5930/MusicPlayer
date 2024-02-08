@@ -1,0 +1,35 @@
+{% extends "index.html" %}
+
+
+
+{% block content %}
+
+    <form action="" method="post">
+        {{ form.hidden_tag() }}
+
+        <div class="form-container">
+            <div>
+                <h2 id="form_title">Regisztráció</h2>
+                <div>
+                    {{ form.username(id="form_username") }}
+                </div>
+                <div>
+                    {{ form.email(id="form_email") }}
+                </div>
+                <div>
+                    {{ form.password(id="form_password") }}
+                    {{ form.show_password(id="form_show_password") }}
+                    <p id="form_show_password_label">Jelszó megjelenítése</p>
+                </div>
+                <div>
+                    {{ form.confirm_password(id="form_confirm_password") }}
+                </div>
+                <div>
+                    {{ form.submit(id="form_submit") }}
+                </div>
+            </div>
+        </div>
+    </form>
+    
+    <script src="{{ url_for('static', filename='JS/register.js') }}"></script>
+{% endblock content %}

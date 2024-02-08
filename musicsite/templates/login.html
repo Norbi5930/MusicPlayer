@@ -1,0 +1,25 @@
+{% extends "index.html" %}
+
+
+{% block content %}
+
+    <form action="" method="post">
+        {{ form.hidden_tag() }}
+
+        <div class="form-container">
+            <div>
+                <h2 id="form_title">Bejelentkezés</h2>
+                <div>
+                    {{ form.username(id="form_username") }}
+                </div>
+                <div>
+                    {{ form.password(id="form_password") }}
+                </div>
+                <div>
+                    {{ form.submit(id="form_submit") }}
+                </div>
+            </div>
+        </div>
+    </form>
+    
+{% endblock content %}

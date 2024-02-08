@@ -126,6 +126,74 @@
     opacity: 0.8;
 }
 
+.active-music {
+    color: green;
+}
+
+
+.form-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 600px;
+    height: 500px;
+    left: 42rem;
+    top: 8rem;
+    border-radius: 35%;
+}
+
+#form_title {
+    text-align: center;
+    font-size: 26px;
+    color: black;
+}
+
+#form_username, #form_email, #form_password, #form_confirm_password, #form_submit {
+    position: relative;
+    margin: 10px 0px 10px 0px;
+    font-size: 20px;
+    border-radius: 10%;
+}
+
+#form_submit {
+    font-size: 24px;
+}
+
+#form_show_password {
+    position: absolute;
+    top: 16rem;
+    left: calc(26rem + 5px);
+    width: 18px;
+    height: 18px;
+}
+
+#form_show_password_label {
+    position: absolute;
+    left: 28rem;
+    top: 16rem;
+    font-size: 16px;
+    user-select: none;
+}
+
+
+.playlist-container {
+    display: block;
+    position: absolute;
+    width: 300px;
+    height: 600px;
+    background-color: black;
+    text-align: center;
+}
+
+.playlist-button {
+    color: white;
+}
+
+.playlist-button-active {
+    color: #91f062;
+}
 
 @media screen and (max-width: 600px) {
     .card {
@@ -190,5 +258,56 @@
         left: 0rem;
         top: 3rem;
         font-size: 20px;
+    }
+
+    .form-container {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        width: 350px;
+        height: 300px;
+        background-color: gray;
+        left: 1rem;
+        top: 8rem;
+        border-radius: 35%;
+    }
+    
+    #form_title {
+        text-align: center;
+        font-size: 20px;
+        color: black;
+    }
+    
+    #form_username, #form_email, #form_password, #form_confirm_password, #form_submit {
+        position: relative;
+        margin: 5px 0px 5px 0px;
+        font-size: 12px;
+        border-radius: 10%;
+    }
+    
+    #form_submit {
+        font-size: 16px;
+    }
+    
+    #form_show_password {
+        position: absolute;
+        top: calc(9rem + 10px);
+        left: calc(17rem - 10px);
+        width: 14px;
+        height: 14px;
+    }
+
+    #form_show_password_label {
+        position: absolute;
+        left: 18rem;
+        top: calc(9rem + 5px);
+        font-size: 10px;
+        user-select: none;
+    }
+
+    .playlist-container {
+        display: none;
     }
 }

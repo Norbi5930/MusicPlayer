@@ -8,8 +8,9 @@ def load_user(id):
 
 
 class User(db.Model, UserMixin):
+    __tablename__ = "Users"
     user_id = db.Column(db.Integer, primary_key=True)
-    username = db.Column(db.String, nullable=False)
+    username = db.Column(db.String, nullable=False, unique=True)
     email = db.Column(db.String, unique=True, nullable=False)
     password = db.Column(db.String, nullable=False)
 
@@ -21,4 +22,11 @@ class User(db.Model, UserMixin):
 class Music(db.Model):
     __tablename__ = "Musics"
     music_id = db.Column(db.Integer, primary_key=True)
+    title = db.Column(db.String, nullable=False)
+
+
+class FavoriteMusic(db.Model):
+    __tablename__ = "FavoriteMusic"
+    music_id = db.Column(db.Integer, primary_key=True)
+    username = db.Column(db.String, nullable=False)
     title = db.Column(db.String, nullable=False)

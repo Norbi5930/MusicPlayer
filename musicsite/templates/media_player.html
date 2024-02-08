@@ -11,6 +11,7 @@
                     <source src="" type="audio/mpeg">
                     Your webbrowser don't play this music!
                 </audio>
+                    <p type="button" id="favoriteMusic" style="text-align: end;">⭐</p>
                 </div>
             </div>
         <button type="button" id="back">►|</button>
@@ -21,6 +22,15 @@
         <span id="seekvalue">00:00</span>
     </section>
 
+
+    <section>
+        <div class="playlist-container">
+            <div class="playlist-body">
+                <h2 id="playlistAll" type="button" class="playlist-button">Összes</h2>
+                <h2 id="playlistFavorite" type="button" class="playlist-button">Kedvencek</h2>
+            </div>
+        </div>
+    </section>
 
     <section>
         <div class="list-container">
@@ -41,6 +51,6 @@
         </form>
     </section>
 
-    <script src="{{ url_for('static', filename='music.js') }}"></script>
+    <script src="{{ url_for('static', filename='JS/music.js') }}"></script>
 
 {% endblock content %}
